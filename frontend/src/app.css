@@ -1,0 +1,33 @@
+@import url('/font/EBGaramond.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, main {
+    @apply w-full h-full antialiased;
+
+    background: var(--page-color);
+    color: var(--font-color);
+
+    font-family: var(--font);
+    font-size: var(--font-size);
+    text-rendering: geometricPrecision;
+}
+
+:root {
+    --ru: 1.6;
+    --font-size: 22px;
+    --font-fallback: serif, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-sans;
+
+    --font: "EB Garamond", var(--font-fallback);
+
+    /* Light theme */
+    --font-color: #333;
+    --page-color: #fafafa;
+
+    /* Dark theme */
+    --page-color: #212121;
+    --font-color: #e3dac4;
+}
