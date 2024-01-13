@@ -117,7 +117,7 @@ fn build_user_cookie(data: &oidc::AuthData) -> Cookie<'static> {
         serde_json::to_string(&data.user).expect("failed to serialize user cookie"),
     )
     .secure(REQUIRE_HTTPS)
-    .max_age(Duration::WEEK)
+    .max_age(Duration::DAY)
     .same_site(SameSite::Strict)
     .path("/")
     .finish()
