@@ -40,7 +40,7 @@ impl UserStorage {
         let mut contents = fs::read_to_string(self.doc_path(identifier)).await?;
 
         if truncate {
-            contents.truncate(TRUNCATE_LEN);
+            contents.truncate(contents.floor_char_boundary(TRUNCATE_LEN));
         }
 
         Ok(Document {

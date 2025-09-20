@@ -8,6 +8,7 @@ const PROD_URL = browser ? window.location.origin : 'definitely-not-working';
 export const ENDPOINT = MODE === 'development' ? LOCAL_URL : PROD_URL;
 
 // TODO Check if bad status codes actually throw an error!
+//      In case of a 401 we should show the login screen.
 
 export interface Document {
     identifier: number,

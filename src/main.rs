@@ -1,3 +1,5 @@
+#![feature(round_char_boundary)]
+
 use axum::{Extension, Router};
 use openidconnect::{ClientId, ClientSecret, IssuerUrl, RedirectUrl, Scope};
 use std::{env, net::SocketAddr};
